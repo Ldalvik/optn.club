@@ -1,6 +1,7 @@
 import { createRouter, createWebHashHistory } from 'vue-router';
 import CarSettingsForm from '../components/CarSettingsForm.vue';
 import MakesAndModels from '../components/MakesAndModels.vue';
+import TuningChart from '../components/chart/TuningChart.vue';
 import TuneCalculator from '../components/tune-calculator/TuneCalculator.vue';
 
 const router = createRouter({
@@ -10,6 +11,7 @@ const router = createRouter({
     { path: '/formatter/:base64Tune?', component: CarSettingsForm },
     { path: '/calculator', component: TuneCalculator },
     { path: '/cars', component: MakesAndModels },
+    { path: '/chart', component: TuningChart },
     { path: '/:pathMatch(.*)*', redirect: '/formatter' },
   ],
 });
